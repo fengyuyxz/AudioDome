@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SpeechRecognitionVC">
+            <connections>
+                <outlet property="swicthBut" destination="OAm-8s-0ws" id="HwX-eX-KeI"/>
+                <outlet property="textView" destination="Dq4-Fr-Zrp" id="WCI-So-l76"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Dq4-Fr-Zrp">
+                    <rect key="frame" x="10" y="54" width="394" height="100"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="e5g-07-ISh"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rli-td-Ii9">
+                    <rect key="frame" x="10" y="164" width="394" height="50"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="FgO-i6-bPT"/>
+                    </constraints>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" title="文字转语音"/>
+                    <connections>
+                        <action selector="textChangeAdioTap:" destination="-1" eventType="touchUpInside" id="2tL-hW-v3E"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAm-8s-0ws">
+                    <rect key="frame" x="10" y="234" width="394" height="50"/>
+                    <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="i3r-db-ckB"/>
+                        <constraint firstAttribute="height" constant="50" id="uEw-bO-RJt"/>
+                    </constraints>
+                    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <state key="normal" title="语音转文字"/>
+                    <connections>
+                        <action selector="audioChangeToTextTap:" destination="-1" eventType="touchUpInside" id="Uhp-Mk-jxt"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="OAm-8s-0ws" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="3aY-VU-baP"/>
+                <constraint firstItem="Dq4-Fr-Zrp" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="57p-pU-RhN"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="rli-td-Ii9" secondAttribute="trailing" constant="10" id="FpA-yV-0Tv"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Dq4-Fr-Zrp" secondAttribute="trailing" constant="10" id="LnF-nR-Ri4"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="OAm-8s-0ws" secondAttribute="trailing" constant="10" id="Xlu-7N-FM5"/>
+                <constraint firstItem="rli-td-Ii9" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="Y9V-HM-ktO"/>
+                <constraint firstItem="OAm-8s-0ws" firstAttribute="top" secondItem="rli-td-Ii9" secondAttribute="bottom" constant="20" id="fML-fL-Rh1"/>
+                <constraint firstItem="Dq4-Fr-Zrp" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="uJf-W8-oMF"/>
+                <constraint firstItem="rli-td-Ii9" firstAttribute="top" secondItem="Dq4-Fr-Zrp" secondAttribute="bottom" constant="10" id="yaK-8P-EGQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="139" y="97"/>
+        </view>
+    </objects>
+</document>
